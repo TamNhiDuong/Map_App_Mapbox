@@ -13,6 +13,7 @@ export default class LocationMarkers extends Component {
         }
     }
 
+    //Getting Data from API
     componentDidMount() {
         fetch('https://corona.lmao.ninja/v2/jhucsse')
           .then((response) => response.json())
@@ -27,6 +28,7 @@ export default class LocationMarkers extends Component {
                 deaths: point.stats.deaths
 
             }))
+            // Converst data to GeoJSON that Mapbox can read
             let geoJSON = GeoJSON.parse(processData, {Point: ['lat', 'lng']});
             this.setState({data: geoJSON});
             console.log(this.state.data);
