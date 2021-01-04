@@ -31,7 +31,7 @@ export default class LocationMarkers extends Component {
             // Converst data to GeoJSON that Mapbox can read
             let geoJSON = GeoJSON.parse(processData, {Point: ['lat', 'lng']});
             this.setState({data: geoJSON});
-            console.log(this.state.data);
+            console.log('GeoJson of markers', this.state.data);
 
           })
           .catch((error) => console.error(error))
