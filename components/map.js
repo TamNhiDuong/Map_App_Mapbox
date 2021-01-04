@@ -13,6 +13,8 @@ import LocationMarkers from './locationMarkers';
 import { lineString as makeLineString } from '@turf/helpers';
 import MapboxDirectionsFactory from '@mapbox/mapbox-sdk/services/directions';
 
+//DRAWING POLYGON
+import polygonGeoJSON from './polygon.json';
 
 //Get Token from Mapbox website
 MapboxGL.setAccessToken('pk.eyJ1IjoibmhpZHVvbmc5NiIsImEiOiJja2d0dzBhamIwZXRwMzVxcjZmOWxsaHY2In0.DTvEY9r2c1RZ1hU-VyoAhw');
@@ -61,6 +63,7 @@ export default class Map extends Component {
     const res = await directionsClient.getDirections(reqOptions).send();
 
     const newRoute = makeLineString(res.body.routes[0].geometry.coordinates);
+    console.log('ROUTE data: ', JSON.stringify(newRoute))
     this.setState({ route: newRoute })
   };
 
@@ -71,6 +74,12 @@ export default class Map extends Component {
 
   render() {
     const { container } = styles;
+    const layerStyles = { //https://github.com/nitaliano/react-native-mapbox-gl/blob/master/docs/FillLayer.md
+      fillAntialias: true,
+      fillColor: 'yellow',
+      fillOutlineColor: 'blue',
+      fillOpacity: '0.7'
+    };
 
     const renderAnnotations = () => {
       return (
@@ -104,7 +113,7 @@ export default class Map extends Component {
             showUserLocation={true}
             userTrackingMode={this.state.userSelectedUserTrackingMode} >
             <MapboxGL.Camera
-              zoomLevel={15}
+              zoomLevel={10}
               animationMode={'flyTo'}
               animationDuration={0}
               ref={c => (this.camera = c)}
@@ -118,6 +127,13 @@ export default class Map extends Component {
                 </MapboxGL.ShapeSource>
               )
             }
+            {/* <MapboxGL.VectorSource>
+              <MapboxGL.BackgroundLayer id='background'/>
+            </MapboxGL.VectorSource> */}
+
+            <MapboxGL.ShapeSource id='polygonSource' shape={polygonGeoJSON}>
+              <MapboxGL.FillLayer id='polygonFill' style={layerStyles} />
+            </MapboxGL.ShapeSource>
             {/* <LocationMarkers></LocationMarkers> */}
           </MapboxGL.MapView>
         </View>
