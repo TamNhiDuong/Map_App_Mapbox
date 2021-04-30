@@ -8,6 +8,7 @@ import {
 import MapboxGL from '@react-native-mapbox-gl/maps';
 
 import LocationMarkers from './locationMarkers';
+import gridPattern from '../assets/grid_pattern.png';
 
 //DRAWING POLYLINES
 import { lineString as makeLineString } from '@turf/helpers';
@@ -74,12 +75,16 @@ export default class Map extends Component {
 
   render() {
     const { container } = styles;
+    
     const layerStyles = { //https://github.com/nitaliano/react-native-mapbox-gl/blob/master/docs/FillLayer.md
       fillAntialias: true,
       fillColor: 'yellow',
       fillOutlineColor: 'blue',
       fillOpacity: '0.7'
     };
+    const background = {
+      backgroundPattern: gridPattern,
+    }
 
     const renderAnnotations = () => {
       return (
@@ -127,14 +132,14 @@ export default class Map extends Component {
                 </MapboxGL.ShapeSource>
               )
             }
-            {/* <MapboxGL.VectorSource>
-              <MapboxGL.BackgroundLayer id='background'/>
-            </MapboxGL.VectorSource> */}
+            <MapboxGL.VectorSource>
+              <MapboxGL.BackgroundLayer id='background' style={background}/>
+            </MapboxGL.VectorSource>
 
             <MapboxGL.ShapeSource id='polygonSource' shape={polygonGeoJSON}>
               <MapboxGL.FillLayer id='polygonFill' style={layerStyles} />
             </MapboxGL.ShapeSource>
-            {/* <LocationMarkers></LocationMarkers> */}
+            <LocationMarkers></LocationMarkers>
           </MapboxGL.MapView>
         </View>
       </SafeAreaView>

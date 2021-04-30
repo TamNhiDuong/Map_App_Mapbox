@@ -1,0 +1,149 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.94580974903676,
+                    60.167443968620006
+                ]
+            },
+            "properties": {
+                "gml:id": "auto.1691350",
+                "version": "1",
+                "note:rekisterinumero": "A-1",
+                "note:aikaleima": "1",
+                "note:geom": {
+                    "gml:Point": {
+                        "srsName": "EPSG:3067",
+                        "gml:pos": "386013.8522466417 6671832.126428202"
+                    }
+                },
+                "formName": "auto",
+                "formNsName": "note:auto"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.947558697295644,
+                    60.1674789284819
+                ]
+            },
+            "properties": {
+                "gml:id": "auto.1691390",
+                "version": "1",
+                "note:rekisterinumero": "A-2",
+                "note:aikaleima": "1",
+                "note:geom": {
+                    "gml:Point": {
+                        "srsName": "EPSG:3067",
+                        "gml:pos": "386111.00067534595 6671833.000975397"
+                    }
+                },
+                "formName": "auto",
+                "formNsName": "note:auto"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.949359485541972,
+                    60.167506811206565
+                ]
+            },
+            "properties": {
+                "gml:id": "auto.1691391",
+                "version": "1",
+                "note:rekisterinumero": "A-3",
+                "note:aikaleima": "1",
+                "note:geom": {
+                    "gml:Point": {
+                        "srsName": "EPSG:3067",
+                        "gml:pos": "386211.00043125876 6671833.0008371435"
+                    }
+                },
+                "formName": "auto",
+                "formNsName": "note:auto"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.946030594525652,
+                    60.16765838398179
+                ]
+            },
+            "properties": {
+                "gml:id": "auto.1691392",
+                "version": "1",
+                "note:rekisterinumero": "A-22",
+                "note:aikaleima": "1",
+                "note:geom": {
+                    "gml:Point": {
+                        "srsName": "EPSG:3067",
+                        "gml:pos": "386026.8469027924 6671855.617045"
+                    }
+                },
+                "formName": "auto",
+                "formNsName": "note:auto"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.94316819994117,
+                    60.16761846048729
+                ]
+            },
+            "properties": {
+                "gml:id": "auto.1691380",
+                "version": "2",
+                "note:rekisterinumero": "A-101",
+                "note:aikaleima": "2",
+                "note:geom": {
+                    "gml:Point": {
+                        "srsName": "EPSG:3067",
+                        "gml:pos": "385867.9108245941 6671856.1160502145"
+                    }
+                },
+                "formName": "auto",
+                "formNsName": "note:auto"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.947590783995807,
+                    60.16777683816328
+                ]
+            },
+            "properties": {
+                "gml:id": "auto.1691370",
+                "version": "2",
+                "note:rekisterinumero": "A-4",
+                "note:aikaleima": "2",
+                "note:geom": {
+                    "gml:Point": {
+                        "srsName": "EPSG:3067",
+                        "gml:pos": "386113.81187288556 6671866.113257817"
+                    }
+                },
+                "formName": "auto",
+                "formNsName": "note:auto"
+            }
+        }
+    ]
+}

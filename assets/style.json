@@ -1,0 +1,19 @@
+{
+    "version":8,
+    "glyphs":"mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "sprite": "http://10.1.7.13:3333/sprite",
+    "sources":{
+      "tile-source":{
+        "type": "raster",
+        "url": "mapbox://mapbox.satellite",
+        "tileSize": 256
+      }
+    },
+    "layers":[
+      {
+        "id":"base-tiles",
+        "type":"raster",
+        "source":"tile-source"
+      }
+    ]
+  }
